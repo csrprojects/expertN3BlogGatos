@@ -81,6 +81,21 @@ header {
 
 button {
   all: unset;
+  transition: all 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+img {
+  transition: all 0.3s;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
 }
 
 main > section article {
@@ -192,5 +207,32 @@ footer p {
     margin-top: 2.75rem;
     position: relative;
     min-width: 26.5rem;
+  }
+}
+
+/* Keyframes */
+
+header {
+  animation: top 600ms 200ms backwards;
+  animation-timing-function: ease-out;
+}
+
+main {
+  animation: bottom 900ms 200ms backwards;
+  animation-timing-function: ease-out;
+}
+
+
+@keyframes top {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes bottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
